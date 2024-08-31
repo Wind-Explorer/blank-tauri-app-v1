@@ -6,7 +6,7 @@ export default function DefaultLayout() {
     <div className="relative flex flex-col justify-between">
       <div className="flex flex-col min-h-screen">
         <WindowTitleBar />
-        <div className="flex-grow">
+        <div className="flex-grow relative">
           <Outlet />
         </div>
       </div>
