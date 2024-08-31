@@ -89,7 +89,7 @@ export default function WindowTitleBar() {
                 onClick={() => {
                   appWindow.close();
                 }}
-                className="hover:bg-red-500 h-full"
+                className="hover:bg-[#C42B1C] h-full"
               >
                 <img
                   className="dark:invert"
