@@ -47,16 +47,17 @@ export default function WindowTitleBar() {
               : "relative w-full h-[30px]"
           }
         >
-          <div data-tauri-drag-region className="absolute w-full h-full"></div>
+
           <div className="w-full h-full *:my-auto flex flex-row justify-between">
-            <div className="flex flex-row *:my-auto">
+            <div className="relative flex flex-row flex-grow *:my-auto">
+              <div data-tauri-drag-region className="absolute w-full h-full"></div>
               <img
                 className="w-4 h-4 mx-2"
                 src="../../src-tauri/icons/icon.ico"
               />
               <p className="text-[0.8rem]">blank-tauri-app-v1</p>
             </div>
-            <div className="flex flex-row h-full *:h-full *:transition-colors *:duration-200">
+            <div className="flex flex-row w-max h-full *:h-full *:transition-colors *:duration-200">
               <button
                 onClick={() => {
                   appWindow.minimize();
@@ -92,7 +93,7 @@ export default function WindowTitleBar() {
                 className="hover:bg-[#C42B1C] h-full"
               >
                 <img
-                  className="dark:invert"
+                  className="dark:invert hover:invert"
                   src="/windows-close.svg"
                   alt="close"
                 />
