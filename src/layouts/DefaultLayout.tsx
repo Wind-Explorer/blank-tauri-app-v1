@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
+import WindowTitleBar from "../components/WindowTitleBar";
 
 export default function DefaultLayout() {
   return (
     <div className="relative flex flex-col justify-between">
       <div className="flex flex-col min-h-screen">
+        <WindowTitleBar />
         <div className="flex-grow">
           <Outlet />
         </div>
